@@ -11,9 +11,12 @@ var weatherObject = new XMLHttpRequest();
  //Convert response text to JSON object
  weatherObject.onload = function() {
     var weatherInfo = JSON.parse(weatherObject.responseText);
+    var 
     console.log(weatherObject.responseText);
     console.log(weatherInfo);
     
+    //Change city to correct name
+    document.getElementById('place').innerHTML = weatherInfo.name;   
 
  }
  
